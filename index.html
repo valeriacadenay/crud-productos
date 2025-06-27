@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/styles.css">
+    
+    <title>Gestion de productos</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Gestion de Productos</h1>
+    </header>
+
+    <main>
+
+      <div id="productos-lista"></div>
+
+      <section id="agregar-producto">
+        <h2>Agregar producto</h2>
+        <label>ID</label>
+        <input type="number" placeholder="numero ex: 1" id="id">
+        <br>
+
+        <label for="name">Nombre</label>
+        <input type="text" placeholder="nombre" id="name">
+        <br>
+
+        <label for="precio">Precio</label>
+        <input type="number" placeholder="$Precio" id="price">
+        <br>
+        <div id="btn-group">
+        <button id="button"> Guardar </button>
+        <button id="button-actualizar"> Actualizar </button>
+        <button id="button-eliminar">Eliminar</button>
+        </div>
+
+        </section>
+      
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./src/js/gestion_datos.js"></script>
+  </body>
+</html>
