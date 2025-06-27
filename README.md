@@ -59,8 +59,10 @@ Product pagination.
 
 ## Author Valeria Cadena Yance
 
-Valeria Cadena Yance
-User github: valeriacadenay
+Valeria Cadena Yance.
+
+User github: valeriacadenay.
+
 Link repositorio: https://github.com/valeriacadenay/crud-productos
 
 
