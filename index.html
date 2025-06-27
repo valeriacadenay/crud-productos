@@ -1,53 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/styles.css">
-    
-    <title>Gestion de productos</title>
-  </head>
-  <body>
+<head>
+  <!-- Metadata settings -->
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <header>
-      <h1>Gestion de Productos</h1>
-    </header>
+  <meta name="description" content="This is a simple CRUD (Create, Read, Update, Delete) project for product management in pure JavaScript, with responsive CSS styles and notifications using SweetAlert2.">
 
-    <main>
+  <meta name="keywords" content="Crud, productos, product management">
 
-      <div id="productos-lista"></div>
+  <meta name="sitedomain" content="gestion de datos">
 
-      <section id="agregar-producto">
-        <h2>Agregar producto</h2>
-        <label>ID</label>
-        <input type="number" placeholder="numero ex: 1" id="id">
-        <br>
+  <meta name="organization" content="Valeria Cadena Yance">
 
-        <label for="name">Nombre</label>
-        <input type="text" placeholder="nombre" id="name">
-        <br>
+  <meta name="author" content="Valeria Cadena Yance">
 
-        <label for="precio">Precio</label>
-        <input type="number" placeholder="$Precio" id="price">
-        <br>
-        <div id="btn-group">
+  <meta name="designer" content="Valeria Cadena Yance">
+
+  <meta name="copyright" content="© 2025 valeriacadenay. All rights reserved">
+
+  <meta name="robots" content="index,follow">
+
+  <meta name="googlebot" content="index,follow">
+
+  <meta name="revisit-after" content="15days">
+
+  <!-- Google Fonts preconnection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Signika+Negative:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <!-- Page title -->
+  <title>Gestion de productos</title>
+</head>
+
+<body>
+
+  <!-- Page header -->
+  <header>
+    <h1>Gestion de Productos</h1>
+  </header>
+
+  <!-- Main content -->
+  <main>
+
+    <!-- Container to display the list of products -->
+    <div id="productos-lista"></div>
+
+    <!-- Section for adding a new product -->
+    <section id="agregar-producto">
+      <h2>Agregar producto</h2>
+
+       <!-- Products input -->
+      <label>ID</label>
+      <input type="number" placeholder="numero ex: 1" id="id">
+      <br>
+
+      <label for="name">Nombre</label>
+      <input type="text" placeholder="nombre" id="name">
+      <br>
+
+      <label for="precio">Precio</label>
+      <input type="number" placeholder="$Precio" id="price">
+      <br>
+      <!-- Buttons group -->
+      <div id="btn-group">
         <button id="button"> Guardar </button>
         <button id="button-actualizar"> Actualizar </button>
         <button id="button-eliminar">Eliminar</button>
-        </div>
+      </div>
 
-        </section>
-      
-    </main>
+    </section>
 
-    <footer></footer>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 valeriacadenay. All rights reserved</p>
+  </footer>
+   <!--Import SweetAlert2 script for alerts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- JavaScript module for CRUD functionality -->
+  <script type="module" src="./src/js/gestion_datos.js"></script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="./src/js/gestion_datos.js"></script>
-  </body>
 </html>
