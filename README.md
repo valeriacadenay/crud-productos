@@ -63,6 +63,8 @@ Valeria Cadena Yance.
 
 User github: valeriacadenay.
 
-Link repositorio: https://github.com/valeriacadenay/crud-productos
+Link repositorio: https://github.com/valeriacadenay/crud-productos.
+
+link to the cloud deployment: https://valeriacadenay.github.io/crud-productos/
 
 
