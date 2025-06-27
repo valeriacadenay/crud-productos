@@ -1,3 +1,4 @@
+// Get DOM elements for inputs and buttons
 const $id = document.getElementById("id");
 const $nombre = document.getElementById("name");
 const $precio = document.getElementById("price");
@@ -5,15 +6,16 @@ const $button = document.getElementById("button");
 const $buttonActualizar = document.getElementById("button-actualizar");
 const $buttonEliminar = document.getElementById("button-eliminar");
 
+// Initialize products object with some default products
 let productos = {
   1: { id: 1, nombre: "laptop", precio: 1500 },
   2: { id: 2, nombre: "Mouse", precio: 250 },
   3: { id: 3, nombre: "teclado", precio: 500 }
 };
 
-// Mostrar productos al inicio
+// Display products on initial load
 mostrarProductos();
-
+// Configure SweetAlert2 toast notifications
 const Toast = Swal.mixin({
   toast: true,
   position: "top-end",
@@ -26,12 +28,13 @@ const Toast = Swal.mixin({
   }
 });
 
-// AGREGAR PRODUCTO
+// ADD PRODUCT functionality
 $button.addEventListener("click", () => {
+  // Get and trim input values
   const id = $id.value.trim();
   const nombre = $nombre.value.trim();
   const precio = parseFloat($precio.value.trim());
-
+  // Validate inputs
   if (!id || !nombre || isNaN(precio)) {
     return Swal.fire({
       title: "Todos los campos son obligatorios",
@@ -41,7 +44,7 @@ $button.addEventListener("click", () => {
    })
   }
 
-  // Verificar duplicado por nombre
+   // Check for duplicate product by name
   const existe = Object.values(productos).some(
     p => p.nombre.toLowerCase() === nombre.toLowerCase()
   );
@@ -54,20 +57,23 @@ $button.addEventListener("click", () => {
       showConfirmButton: false
    })
   }
-
+// Add product to productos object
   productos[id] = { id, nombre, precio };
 
+// Show success message and update product list
   Swal.fire("Producto guardado!", "", "success");
   mostrarProductos();
   limpiarCampos();
 });
 
-// ACTUALIZAR PRODUCTO
+// UPDATE PRODUCT functionality
 $buttonActualizar.addEventListener("click", () => {
+  // Get and trim input values
   const id = $id.value.trim();
   const nombre = $nombre.value.trim();
   const precio = parseFloat($precio.value.trim());
 
+  // Check if product exists by ID
   if (!productos[id]) {
     return Swal.fire({
       title: "Producto no encontrado",
@@ -77,7 +83,7 @@ $buttonActualizar.addEventListener("click", () => {
    })
   }
 
-  // Verifica si ya existe otro con el mismo nombre
+  // Check if another product already has the same name
   const duplicado = Object.values(productos).some(
     p => p.nombre.toLowerCase() === nombre.toLowerCase() && p.id != id
   );
@@ -89,10 +95,11 @@ $buttonActualizar.addEventListener("click", () => {
       showConfirmButton: false
    });
   }
-
+ // Update product name and price
   productos[id].nombre = nombre;
   productos[id].precio = precio;
 
+  // Show success message and update product list
   Swal.fire({
       title: "Producto actualizado",
       icon: "info",
@@ -103,15 +110,17 @@ $buttonActualizar.addEventListener("click", () => {
   limpiarCampos();
 });
 
-// ELIMINAR PRODUCTO
+// DELETE PRODUCT functionality
 $buttonEliminar.addEventListener("click", () => {
+  // DELETE PRODUCT functionality
   const id = $id.value.trim();
-
+ // Check if product exists
   if (!productos[id]) {
     return Swal.fire("Producto no encontrado", "", "error");
   }
-
+// Delete product from productos object
   delete productos[id];
+  // Show success message and update product list
    Swal.fire({
       title: "Producto eliminado",
       icon: "success",
@@ -122,11 +131,11 @@ $buttonEliminar.addEventListener("click", () => {
   limpiarCampos();
 });
 
-// MOSTRAR PRODUCTOS
+// DISPLAY PRODUCTS function
 function mostrarProductos() {
   let contenedor = document.getElementById("productos-lista");
   let html = "<h2>Productos:</h2><ul>";
-
+// Loop through products and create list items
   for (let key in productos) {
     const p = productos[key];
     html += `<li>ID: ${p.id}, Nombre: ${p.nombre}, Precio: $${p.precio}</li>`;
@@ -136,7 +145,7 @@ function mostrarProductos() {
   contenedor.innerHTML = html;
 }
 
-//LIMPIAR CAMPOS
+// CLEAR INPUT FIELDS function
 function limpiarCampos() {
   $id.value = "";
   $nombre.value = "";
