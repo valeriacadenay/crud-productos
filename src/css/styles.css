@@ -77,7 +77,7 @@ button:hover {
   background-color: #023e8a;
 }
 
-/* Grupo de botones centrado */
+/* Gruop of botones in the center */
 #btn-group{
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@ button:hover {
   max-width: 120px;
 }
 
-/* Productos lista */
+/* Productos list */
 #productos-lista {
   margin-top: 20px;
   background: #e9ecef;
@@ -121,7 +121,7 @@ footer {
 }
 
 /* -----------------------------
-   RESPONSIVE: para pantallas pequeñas
+   RESPONSIVE: for small screens
 ---------------------------------- */
 @media (max-width: 768px) {
   body {
