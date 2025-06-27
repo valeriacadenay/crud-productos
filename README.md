@@ -1,64 +1,66 @@
-# 🛒 Gestión de Productos CRUD
+# 🛒 CRUD Product Management
 
-Este es un proyecto simple de CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de productos en JavaScript puro, con estilos CSS responsive y notificaciones utilizando SweetAlert2.
+This is a simple CRUD (Create, Read, Update, Delete) project for product management in pure JavaScript, with responsive CSS styles and notifications using SweetAlert2.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-✅ Agregar nuevos productos  
-✅ Ver la lista de productos registrados  
-✅ Actualizar productos existentes  
-✅ Eliminar productos  
-✅ Evita ingresar productos duplicados por nombre  
-✅ Interfaz responsive para dispositivos móviles  
-✅ Notificaciones modernas con SweetAlert2
+✅ Add new products  
+✅ View the list of registered products  
+✅ Update existing products  
+✅ Delete products  
+✅ Avoid entering duplicate products by name  
+✅ Responsive interface for mobile devices  
+✅ Modern notifications with SweetAlert2
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
 - HTML5
 - CSS3 (Flexbox + Media Queries)
 - JavaScript Vanilla
 - SweetAlert2
 
-## 💻 Estructura de archivos
+## 💻 File structure
 
-/project-root
+```bash
 │
 ├── index.html
-├── style.css
+├── pulblic
 └── src
-└── js
-└── gestion_datos.js
+    └── js
+        └── gestion_datos.js
+    └── css
+        └── styles.js        
+```
+
+## ⚙️ How to use
+
+1. Clone this repository: git clone https://github.com/valeriacadenay/crud-productos
+
+2. Open the index.html file in your browser.
+
+3. Interact with the interface:
+
+4. Enter the ID, name, and price of a product and click Save.
+
+5. View the added products in the list.
+
+6. To update, use the same ID with new values and click Update.
+
+7. To delete, enter the ID and click Delete.
 
 
-## ⚙️ Cómo usar
+## ✨ Future improvement
+Data persistence with LocalStorage.
 
-1. Clona este repositorio:
+Search filters.
 
-```bash
-git clone https://github.com/tu-usuario/gestion-productos-crud.git
-
-Abre el archivo index.html en tu navegador.
-
-Interactúa con la interfaz:
-
-Ingresa el ID, nombre y precio de un producto y haz clic en Guardar.
-
-Visualiza los productos agregados en la lista.
-
-Para actualizar, usa el mismo ID con nuevos valores y haz clic en Actualizar.
-
-Para eliminar, ingresa el ID y haz clic en Eliminar.
-
-```bash
-✨ Mejora futura
-Persistencia de datos con LocalStorage o Backend.
-
-Filtros de búsqueda.
-
-Paginación de productos.
-
-Integración con base de datos.
+Product pagination.
 
 
----
+## Author Valeria Cadena Yance
+
+Valeria Cadena Yance
+User github: valeriacadenay
+Link repositorio: https://github.com/valeriacadenay/crud-productos
+
 
